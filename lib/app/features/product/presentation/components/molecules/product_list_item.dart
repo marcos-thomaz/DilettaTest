@@ -5,8 +5,13 @@ import 'package:flutter/material.dart';
 
 class ProductListItem extends StatelessWidget {
   final Product product;
+  final void Function() onFavoriteItem;
 
-  const ProductListItem({super.key, required this.product});
+  const ProductListItem({
+    super.key,
+    required this.product,
+    required this.onFavoriteItem,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +22,7 @@ class ProductListItem extends StatelessWidget {
           height: 80,
           width: 80,
           imageUrl: product.image,
-          placeholder: (context, url) => const CircularProgressIndicator(),
+          // placeholder: (context, url) => Container(), TODO
           errorWidget: (context, url, error) => const Icon(Icons.error),
         ),
         title: Text(
@@ -42,9 +47,7 @@ class ProductListItem extends StatelessWidget {
           ],
         ),
         trailing: const Icon(Icons.favorite_border),
-        onTap: () {
-          // Handle item tap
-        },
+        onTap: onFavoriteItem,
       ),
     );
   }

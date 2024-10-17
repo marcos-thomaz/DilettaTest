@@ -1,4 +1,3 @@
-import 'package:dilettatest/app/features/product/domain/entities/product.dart';
 import 'package:dilettatest/app/features/product/presentation/bloc/product_bloc.dart';
 import 'package:dilettatest/app/features/product/presentation/components/molecules/product_list_item.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +14,15 @@ class ProductsListScreen extends StatelessWidget {
         return ListView.builder(
           itemCount: products.length,
           itemBuilder: (context, index) {
-            return ProductListItem(product: products[index]);
+            final product = products[index];
+            return ProductListItem(
+              product: product,
+              onFavoriteItem: () {
+                context.read<ProductBloc>().add(
+                      FavoriteProductEvent(product: product),
+                    );
+              },
+            );
           },
         );
       },
