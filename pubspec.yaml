@@ -15,8 +15,11 @@ dependencies:
   bloc: ^8.1.4
   bloc_concurrency: ^0.2.5
   brasil_fields: ^1.14.3
+  cached_network_image: ^3.4.1
   collection: ^1.18.0
   cupertino_icons: ^1.0.6
+  dartz: ^0.10.1
+  dio: ^5.7.0
   equatable: ^2.0.5
   flutter_bloc: ^8.1.5
   get_it: ^7.6.7

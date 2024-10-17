@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dilettatest/app/core/extensions/double_extension.dart';
 import 'package:dilettatest/app/features/product/domain/entities/product.dart';
 import 'package:flutter/material.dart';
@@ -10,29 +11,37 @@ class ProductListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(8.0),
+      margin: const EdgeInsets.all(8.0),
       child: ListTile(
-        leading: Image.network(
-          product.imageUrl,
-          width: 50,
-          height: 50,
-          fit: BoxFit.cover,
+        leading: CachedNetworkImage(
+          height: 80,
+          width: 80,
+          imageUrl: product.image,
+          placeholder: (context, url) => const CircularProgressIndicator(),
+          errorWidget: (context, url, error) => const Icon(Icons.error),
         ),
         title: Text(
-          product.name,
-          style: TextStyle(fontWeight: FontWeight.bold),
+          product.title,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 4.0),
+            const SizedBox(height: 4.0),
+            Text(
+              product.category,
+              style: const TextStyle(fontSize: 11),
+            ),
+            const SizedBox(height: 4.0),
             Text(
               product.price.toStringCurrency,
-              style: TextStyle(color: Colors.green),
+              style: const TextStyle(color: Colors.green),
             ),
           ],
         ),
-        trailing: Icon(Icons.favorite_border),
+        trailing: const Icon(Icons.favorite_border),
         onTap: () {
           // Handle item tap
         },

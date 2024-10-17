@@ -14,10 +14,27 @@ class _AppRootState extends State<AppRoot> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('🏷️ CompreFácil App'),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 16.0),
+            child: Icon(
+              Icons.search,
+              size: 24,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(right: 16.0),
+            child: Badge.count(
+              count: 10,
+              child: Icon(
+                Icons.favorite,
+                size: 24,
+              ),
+            ),
+          ),
+        ],
       ),
-      body: const Center(
-        child: ProductsListScreen(),
-      ),
+      body: const ProductsListScreen(),
     );
   }
 }
