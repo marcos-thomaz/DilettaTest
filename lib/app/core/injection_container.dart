@@ -1,4 +1,4 @@
-import 'package:dilettatest/app/features/product_list/dependency_injection.dart';
+import 'package:dilettatest/app/features/product/dependency_injection.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
