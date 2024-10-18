@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 
 class ProductListItem extends StatelessWidget {
   final Product product;
-  final void Function() onFavoriteItem;
+  final void Function() onToggleItem;
 
   const ProductListItem({
     super.key,
     required this.product,
-    required this.onFavoriteItem,
+    required this.onToggleItem,
   });
 
   @override
@@ -22,7 +22,6 @@ class ProductListItem extends StatelessWidget {
           height: 80,
           width: 80,
           imageUrl: product.image,
-          // placeholder: (context, url) => Container(), TODO
           errorWidget: (context, url, error) => const Icon(Icons.error),
         ),
         title: Text(
@@ -46,8 +45,10 @@ class ProductListItem extends StatelessWidget {
             ),
           ],
         ),
-        trailing: const Icon(Icons.favorite_border),
-        onTap: onFavoriteItem,
+        trailing: GestureDetector(
+          onTap: onToggleItem,
+          child: const Icon(Icons.favorite_border),
+        ),
       ),
     );
   }

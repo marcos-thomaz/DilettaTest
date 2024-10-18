@@ -1,0 +1,8 @@
+import 'package:dartz/dartz.dart';
+import 'package:dilettatest/app/core/exceptions/app_exception.dart';
+import 'package:dilettatest/app/features/product/data/models/product_model.dart';
+
+abstract class WishlistRepository {
+  Future<Either<AppException, void>> toggleProductWishlist(ProductModel product);
+  Future<Either<AppException, List<ProductModel>>> getWishlist();
+}

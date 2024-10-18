@@ -15,7 +15,7 @@ class _AppRootState extends State<AppRoot> {
       appBar: AppBar(
         title: const Text('🏷️ CompreFácil App'),
         actions: [
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(right: 16.0),
             child: Icon(
               Icons.search,
@@ -23,10 +23,10 @@ class _AppRootState extends State<AppRoot> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(right: 16.0),
+            padding: const EdgeInsets.only(right: 16.0),
             child: Badge.count(
               count: 10,
-              child: Icon(
+              child: const Icon(
                 Icons.favorite,
                 size: 24,
               ),

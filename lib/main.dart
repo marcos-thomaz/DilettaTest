@@ -2,6 +2,7 @@ import 'package:dilettatest/app/core/app_root.dart';
 import 'package:dilettatest/app/core/constants/font.dart';
 import 'package:dilettatest/app/core/injection_container.dart';
 import 'package:dilettatest/app/features/product/presentation/bloc/product_bloc.dart';
+import 'package:dilettatest/app/features/wishlist/presentation/bloc/wishlist_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -32,6 +33,11 @@ class MyApp extends StatelessWidget {
               lazy: false,
               create: (context) =>
                   getIt<ProductBloc>()..add(GetAllProductEvent()),
+            ),
+            BlocProvider<WishlistBloc>(
+              lazy: false,
+              create: (context) =>
+                  getIt<WishlistBloc>()..add(GetWishlistEvent()),
             ),
           ],
           child: const AppRoot(),
