@@ -1,3 +1,4 @@
+import 'package:dilettatest/app/core/constants/env.dart';
 import 'package:dilettatest/app/core/injection_container.dart';
 import 'package:dilettatest/app/features/product/data/datasources/product_data_source.dart';
 import 'package:dilettatest/app/features/product/data/repositories/product_repository_impl.dart';
@@ -16,7 +17,7 @@ void startProductFeature() {
 
 void _networkModules() {
   getIt.registerLazySingleton<Dio>(() => Dio(BaseOptions(
-        baseUrl: 'https://670e655e3e715186165457a2.mockapi.io/api',
+        baseUrl: Env.baseUrl,
         receiveDataWhenStatusError: true,
         responseType: ResponseType.json,
       )));

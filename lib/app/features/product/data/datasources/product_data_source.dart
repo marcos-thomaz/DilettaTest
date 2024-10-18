@@ -15,14 +15,14 @@ class ProductRemoteDataSourceImpl implements ProductRemoteDataSource {
   @override
   Future<Either<AppException, List<ProductModel>>> getAllProducts() async {
     try {
-      final result = await dio.get('https://fakestoreapi.com/products');
+      final result = await dio.get('/products');
 
       final products = result.data
           .map<ProductModel>((e) => ProductModel.fromJson(e))
           .toList();
       return Right(products);
     } catch (e) {
-      return Left(AppException('Failed to request at /v1/products - [$e]'));
+      return Left(AppException('Failed to request at /products - [$e]'));
     }
   }
 }

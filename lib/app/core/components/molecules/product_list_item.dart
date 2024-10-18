@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 
 class ProductListItem extends StatelessWidget {
   final Product product;
-  final void Function() onToggleItem;
+  final void Function()? onToggleItem;
   final bool isWished;
 
   const ProductListItem({
     super.key,
     required this.product,
-    required this.onToggleItem,
+    this.onToggleItem,
     required this.isWished,
   });
 

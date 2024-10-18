@@ -29,7 +29,6 @@ class WishlistScreen extends StatelessWidget {
                 return ProductListItem(
                   isWished: true,
                   product: product,
-                  onToggleItem: () {},
                 );
               },
             );
