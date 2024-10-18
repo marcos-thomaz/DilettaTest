@@ -19,13 +19,13 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
 
   Future<void> _getAllProductEvent(
       GetAllProductEvent event, Emitter emit) async {
-    emit(state.copyWith(products: []));
+    emit(state.copyWith(products: [], isLoading: true));
 
     final products = await getAllProducts(NoParams());
 
     products.fold(
-      (left) => emit(state.copyWith(products: [])),
-      (right) => emit(state.copyWith(products: right)),
+      (left) => emit(state.copyWith(products: [], isLoading: false)),
+      (right) => emit(state.copyWith(products: right, isLoading: false)),
     );
   }
 }

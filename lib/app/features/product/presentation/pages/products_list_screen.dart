@@ -12,6 +12,18 @@ class ProductsListScreen extends StatelessWidget {
     return BlocBuilder<ProductBloc, ProductState>(
       builder: (context, state) {
         final products = state.products;
+        if (state.isLoading) {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        }
+
+        if (products.isEmpty) {
+          return const Center(
+            child: Text('Nenhum produto encontrado 📋'),
+          );
+        }
+
         return ListView.builder(
           itemCount: products.length,
           itemBuilder: (context, index) {
