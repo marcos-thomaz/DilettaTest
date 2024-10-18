@@ -1,22 +1,27 @@
-part of 'wishlist_bloc.dart';
+part of 'wishlist_cubit.dart';
 
 class WishlistState extends Equatable {
-  final List<ProductModel> products;
+  final List<WishProductModel> wishProducts;
+  final bool hasError;
 
   const WishlistState({
-    this.products = const [],
+    this.wishProducts = const [],
+    this.hasError = false,
   });
 
   WishlistState copyWith({
-    List<ProductModel>? products,
+    List<WishProductModel>? wishProducts,
+    bool? hasError
   }) {
     return WishlistState(
-      products: products ?? this.products,
+      wishProducts: wishProducts ?? this.wishProducts,
+      hasError: hasError ?? this.hasError,
     );
   }
 
   @override
   List<Object> get props => [
-        products,
+        wishProducts,
+        hasError
       ];
 }

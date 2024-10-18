@@ -4,7 +4,7 @@ import 'package:dilettatest/app/features/wishlist/data/repositories/wishlist_rep
 import 'package:dilettatest/app/features/wishlist/domain/repositories/wishlist_repository.dart';
 import 'package:dilettatest/app/features/wishlist/domain/usecases/get_wishlist.dart';
 import 'package:dilettatest/app/features/wishlist/domain/usecases/toggle_product.dart';
-import 'package:dilettatest/app/features/wishlist/presentation/bloc/wishlist_bloc.dart';
+import 'package:dilettatest/app/features/wishlist/presentation/bloc/wishlist_cubit.dart';
 import 'package:dio/dio.dart';
 
 void startWishlistFeature() {
