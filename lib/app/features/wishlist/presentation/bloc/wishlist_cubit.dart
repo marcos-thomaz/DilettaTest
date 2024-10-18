@@ -21,7 +21,7 @@ class WishlistBloc extends Cubit<WishlistState> {
     final result = await getWishlist(NoParams());
     result.fold(
       (left) => emit(state.copyWith(hasError: true)),
-      (right) => emit(state.copyWith(wishProducts: right)),
+      (right) => emit(state.copyWith(wishProducts: right, countWishes: right.length)),
     );
   }
 
@@ -30,7 +30,7 @@ class WishlistBloc extends Cubit<WishlistState> {
         Params(product: WishProductModel(product: product)));
     result.fold(
       (left) => emit(state.copyWith(hasError: true)),
-      (right) => null,
+      (right) => emit(state.copyWith(wishProducts: right, countWishes: right.length)),
     );
   }
 }

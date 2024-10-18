@@ -1,3 +1,4 @@
+import 'package:dilettatest/app/features/product/data/models/product_model.dart';
 import 'package:dilettatest/app/features/wishlist/domain/entities/wish_product.dart';
 
 class WishProductModel extends WishProduct {
@@ -7,13 +8,13 @@ class WishProductModel extends WishProduct {
 
   factory WishProductModel.fromJson(Map<String, dynamic> json) {
     return WishProductModel(
-      product: json['product'],
+      product: ProductModel.fromJson(json['product'] as Map<String, dynamic>),
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
-      'product': product,
+      'product': product.toJson(),
     };
   }
 }

@@ -16,6 +16,7 @@ class ProductsListScreen extends StatelessWidget {
           itemBuilder: (context, index) {
             final product = products[index];
             return ProductListItem(
+              isWished: false,
               product: product,
               onToggleItem: () {
               },

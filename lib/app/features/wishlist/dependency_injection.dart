@@ -5,28 +5,18 @@ import 'package:dilettatest/app/features/wishlist/domain/repositories/wishlist_r
 import 'package:dilettatest/app/features/wishlist/domain/usecases/get_wishlist.dart';
 import 'package:dilettatest/app/features/wishlist/domain/usecases/toggle_product.dart';
 import 'package:dilettatest/app/features/wishlist/presentation/bloc/wishlist_cubit.dart';
-import 'package:dio/dio.dart';
 
 void startWishlistFeature() {
-  // _networkModules();
   _datasourceModules();
   _repositoryModules();
   _usercasesModules();
   _blocModules();
 }
 
-void _networkModules() {
-  getIt.registerLazySingleton<Dio>(() => Dio(BaseOptions(
-        baseUrl: 'https://670e655e3e715186165457a2.mockapi.io/api',
-        receiveDataWhenStatusError: true,
-        responseType: ResponseType.json,
-      )));
-}
-
 void _datasourceModules() {
   getIt.registerLazySingleton<WishlistDataSource>(
     () => WishlistDataSourceImpl(
-      dio: getIt(),
+      sharedPreferences: getIt(),
     ),
   );
 }

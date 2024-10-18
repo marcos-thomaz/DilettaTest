@@ -15,7 +15,7 @@ class WishlistRepositoryImpl implements WishlistRepository {
   }
 
   @override
-  Future<Either<AppException, void>> toggleProductWishlist(WishProductModel product) {
+  Future<Either<AppException, List<WishProductModel>>> toggleProductWishlist(WishProductModel product) {
     return wishlistDataSource.toggleProductWishlist(product);
   }
 

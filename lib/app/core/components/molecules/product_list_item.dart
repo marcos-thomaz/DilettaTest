@@ -6,11 +6,13 @@ import 'package:flutter/material.dart';
 class ProductListItem extends StatelessWidget {
   final Product product;
   final void Function() onToggleItem;
+  final bool isWished;
 
   const ProductListItem({
     super.key,
     required this.product,
     required this.onToggleItem,
+    required this.isWished,
   });
 
   @override
@@ -46,9 +48,8 @@ class ProductListItem extends StatelessWidget {
           ],
         ),
         trailing: GestureDetector(
-          onTap: onToggleItem,
-          child: const Icon(Icons.favorite_border),
-        ),
+            onTap: onToggleItem,
+            child: Icon(isWished ? Icons.favorite : Icons.favorite_border)),
       ),
     );
   }

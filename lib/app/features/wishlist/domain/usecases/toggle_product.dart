@@ -5,13 +5,13 @@ import 'package:dilettatest/app/features/wishlist/data/models/wish_product_model
 import 'package:dilettatest/app/features/wishlist/domain/repositories/wishlist_repository.dart';
 import 'package:equatable/equatable.dart';
 
-class ToggleProduct implements UseCase<void, Params> {
+class ToggleProduct implements UseCase<List<WishProductModel>, Params> {
   final WishlistRepository wishlistRepository;
 
   ToggleProduct({required this.wishlistRepository});
 
   @override
-  Future<Either<AppException, void>> call(Params params) async {
+  Future<Either<AppException, List<WishProductModel>>> call(Params params) async {
     return await wishlistRepository.toggleProductWishlist(params.product);
   }
 }

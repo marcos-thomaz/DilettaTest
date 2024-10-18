@@ -16,12 +16,19 @@ class ProductsListScreen extends StatelessWidget {
           itemCount: products.length,
           itemBuilder: (context, index) {
             final product = products[index];
-            return ProductListItem(
-              product: product,
-              onToggleItem: () {
-                context.read<WishlistBloc>().toggleProductEvent(product);
-              },
-            );
+
+            return BlocBuilder<WishlistBloc, WishlistState>(
+                builder: (context, state) {
+              return ProductListItem(
+                isWished: state.wishProducts
+                    .where((wish) => wish.product.id == product.id)
+                    .isNotEmpty,
+                product: product,
+                onToggleItem: () {
+                  context.read<WishlistBloc>().toggleProductEvent(product);
+                },
+              );
+            });
           },
         );
       },
