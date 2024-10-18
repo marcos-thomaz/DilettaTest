@@ -1,4 +1,4 @@
-import 'package:dilettatest/app/features/product/data/models/product_model.dart';
+import 'package:dilettatest/app/features/products/data/models/product_model.dart';
 import 'package:dilettatest/app/features/wishlist/domain/entities/wish_product.dart';
 
 class WishProductModel extends WishProduct {

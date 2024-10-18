@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:dilettatest/app/core/usecases/usecase.dart';
-import 'package:dilettatest/app/features/product/data/models/product_model.dart';
+import 'package:dilettatest/app/features/products/data/models/product_model.dart';
 import 'package:dilettatest/app/features/wishlist/data/models/wish_product_model.dart';
 import 'package:dilettatest/app/features/wishlist/domain/usecases/get_wishlist.dart';
 import 'package:dilettatest/app/features/wishlist/domain/usecases/toggle_product.dart';

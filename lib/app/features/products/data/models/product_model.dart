@@ -1,4 +1,4 @@
-import 'package:dilettatest/app/features/product/domain/entities/product.dart';
+import 'package:dilettatest/app/features/products/domain/entities/product.dart';
 
 class ProductModel extends Product {
   const ProductModel({

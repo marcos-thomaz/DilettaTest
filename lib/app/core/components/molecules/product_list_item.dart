@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dilettatest/app/core/extensions/double_extension.dart';
-import 'package:dilettatest/app/features/product/domain/entities/product.dart';
+import 'package:dilettatest/app/features/products/domain/entities/product.dart';
 import 'package:flutter/material.dart';
 
 class ProductListItem extends StatelessWidget {

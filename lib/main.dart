@@ -1,7 +1,7 @@
 import 'package:dilettatest/app/core/app_root.dart';
 import 'package:dilettatest/app/core/constants/font.dart';
 import 'package:dilettatest/app/core/injection_container.dart';
-import 'package:dilettatest/app/features/product/presentation/bloc/product_bloc.dart';
+import 'package:dilettatest/app/features/products/presentation/bloc/product_bloc.dart';
 import 'package:dilettatest/app/features/wishlist/presentation/bloc/wishlist_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

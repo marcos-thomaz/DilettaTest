@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:dilettatest/app/core/usecases/usecase.dart';
-import 'package:dilettatest/app/features/product/data/models/product_model.dart';
-import 'package:dilettatest/app/features/product/domain/usecases/get_all_products.dart';
+import 'package:dilettatest/app/features/products/data/models/product_model.dart';
+import 'package:dilettatest/app/features/products/domain/usecases/get_all_products.dart';
 import 'package:equatable/equatable.dart';
 
 part 'product_event.dart';

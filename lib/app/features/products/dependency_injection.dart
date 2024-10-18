@@ -1,10 +1,10 @@
 import 'package:dilettatest/app/core/constants/env.dart';
 import 'package:dilettatest/app/core/injection_container.dart';
-import 'package:dilettatest/app/features/product/data/datasources/product_data_source.dart';
-import 'package:dilettatest/app/features/product/data/repositories/product_repository_impl.dart';
-import 'package:dilettatest/app/features/product/domain/repositories/product_repository.dart';
-import 'package:dilettatest/app/features/product/domain/usecases/get_all_products.dart';
-import 'package:dilettatest/app/features/product/presentation/bloc/product_bloc.dart';
+import 'package:dilettatest/app/features/products/data/datasources/product_data_source.dart';
+import 'package:dilettatest/app/features/products/data/repositories/product_repository_impl.dart';
+import 'package:dilettatest/app/features/products/domain/repositories/product_repository.dart';
+import 'package:dilettatest/app/features/products/domain/usecases/get_all_products.dart';
+import 'package:dilettatest/app/features/products/presentation/bloc/product_bloc.dart';
 import 'package:dio/dio.dart';
 
 void startProductFeature() {

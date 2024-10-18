@@ -1,4 +1,4 @@
-import 'package:dilettatest/app/features/product/presentation/pages/products_list_screen.dart';
+import 'package:dilettatest/app/features/products/presentation/pages/products_list_screen.dart';
 import 'package:dilettatest/app/features/wishlist/presentation/bloc/wishlist_cubit.dart';
 import 'package:dilettatest/app/features/wishlist/presentation/pages/wishlist_screen.dart';
 import 'package:flutter/material.dart';

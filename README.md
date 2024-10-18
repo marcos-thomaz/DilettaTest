@@ -1,13 +1,75 @@
-# DilettaTest
+# 🏷️ WISHLIST APP
 
-Desafio técnico - Flutter
+Este app traz uma listagem de produtos do backend via API e cria uma wishlist baseada nessa lista de produtos. Basicamente você adicionar alguns produtos nessa lista de desejos. 
 
-Desafio: Essa é uma vaga para desenvolvedor Flutter (Mobile), e pensamos em um teste simples para avaliar o desempenho na stack. A ideia desse desafio é criar uma aplicação de listagem de produtos.
+## Funcionalidades
+- Listagem de produtos
+- Wishlist
 
-Na escolha do backend também deixaremos livre, os dados podem ser adquiridos de uma API free, ou mesmo podem ser adicionados via https://mockapi.io/
+## Requisitos
+Antes de executar o projeto, tenha certeza que as seguintes ferramentas estão instaladas e funcionando:
 
-Componentes: Faça a listagem como bem entender, traga os produtos do backend via API e crie uma wishlist baseada nessa lista de produtos. Basicamente é adicionar alguns produtos nessa lista de desejos. Você tem autonomia no design, pode colocar em duas telas, uma página à parte, você é o dono da aplicação.
+- [Flutter](https://flutter.dev/docs/get-started/install) (version >= 3.22.0)
+- [Dart](https://dart.dev/get-dart)
+- [Android Studio](https://developer.android.com/studio) (for Android)
+- [Xcode](https://developer.apple.com/xcode/) (for iOS)
+- Um dispositivo físico ou emulador para testar o aplicativo
 
-Regras de Negócio: Cada usuário poderá criar sua própria wishlist. Você é livre para escolher qual gerenciador de estado prefere, adicione os filtros que achar pertinente para a manipulação da wishlist.
+## Instalação
 
-A ideia será criar um pull request nesse repositório para ser avaliado.
+1. Clone o repositório:
+
+2. Instale as dependências:
+   ```bash
+   flutter pub get
+   ```
+
+3. Conecte um dispositível físico ou simulador:
+
+## Executar o app
+
+### .env
+Crie um arquivo .env na raiz do projeto. Substitua o valor de BASE_URL.
+   ```bash
+   BASE_URL=https://fakestoreapi.com
+   ```
+
+### Android
+1. Conecte um celular Android ou abre um simulador Android.
+2. No terminar, rode o comando::
+   ```bash
+   flutter run
+   ```
+
+### iOS
+1. Abra o projeto Flutter no Xcode:
+   ```bash
+   open ios/Runner.xcworkspace
+   ```
+
+2. Escolhar simular.
+3. Execute o projeto:
+   ```bash
+   flutter run
+   ```
+
+## Contribuição
+Você pode contribuir neste projeto. Se você deseja contribuir com o projeto, siga estes passos:
+
+2. Crie uma nova ramificação para seu recurso ou correção de bug:
+   ```bash
+   git checkout -b my-new-branch
+   ```
+
+3. Faça suas alterações e adicione testes para elas.
+4. Commit as mudanças:
+   ```bash
+   git commit -m "Feature improvements"
+   ```
+
+5. Dê push na branch:
+   ```bash
+   git push origin my-new-branch
+   ```
+
+6. Abra um Pull Request no repositório original.
